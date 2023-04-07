@@ -1,0 +1,62 @@
+body {
+  background-color: #141f36;
+}
+
+
+.skip a{
+  position: absolute;
+  top: -40px;
+  background: #141f36;
+  left: 0;
+  padding: 6px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+.skip a:focus {
+  position: absolute;
+  top: 0px;
+}
+
+.header {
+  text-align: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 75px;
+  color: rgb(254, 229, 219);
+}
+
+
+
+/* Page Links Next to Each Other */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #141f36;
+  z-index: 100;
+}
+
+.navbar a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding: 14px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  /* margin-right: 10px; */
+  color: lightsalmon; /* Dark gray color */
+  background-color: transparent; /* Set transparent background color */
+  transition: background-color 0.2s ease-out, color 0.2s ease-out /* Add transition effect */
+}
+
+.navbar a:hover {
+  text-decoration: none; /* Remove default underline on hover */
+  background-color: lightsalmon; /* Set background color to orange on hover */
+  color: #fff; /* Set font color to white on hover */
+}

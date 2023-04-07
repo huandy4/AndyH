@@ -1,0 +1,30 @@
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 3%;
+    margin-left: 20%;
+    margin-right: 20%;
+    justify-content: center;
+}
+
+.flex-item {
+    flex: 1 0 calc(33.3333% - 10px);
+    /* padding: 10px; */
+    position: relative;
+    /* background-color: lightsalmon; */
+}
+
+.flex-item img {
+    
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 0.2s ease-out/* Add transition effect */
+
+}
+
+.flex-item:hover img {
+    opacity: 0.3;
+
+}
