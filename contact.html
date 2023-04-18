@@ -15,23 +15,46 @@
     <div class="skip"><a href="#main">Skip to Main Content</a></div>
     <nav>
         <div class="navbar">
-            <a href="index.html">Home Page</a>
-            <a href="projects.html">My Projects</a>
-            <a href="contact.html">Contact me</a>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html" class="nav-link active">Contact</a>
         </div>
     </nav>
-    <div class="header">
-        <h1>You can reach me here!</h1>
-    </div>
 
-
-
-    <main id="main" tabindex="-1">
-        <div class="contacts">
-            <p>Email: huandy@umich.edu</p>
-            <p>Phone: 917-615-5877</p>
+    <header>
+        <div class="header">
+            <h1>You can reach me here!</h1>
         </div>
+    </header>
+
+
+    <main id="main">
+        <section class="contact-form">
+            <form action="#" method="POST" onsubmit="return validateForm()" class="form-grid">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="10" required></textarea>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
     </main>
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            if (name.trim() === "" || email.trim() === "" || message.trim() === "") {
+                alert("Please fill out all the fields.");
+                return false;
+            }
+            alert("Submitted!");
+            return false;
+        }
+    </script>
 </body>
 
 </html>
